@@ -1,0 +1,29 @@
+.container{
+    display: flex;
+    flex: 4;
+    justify-content: space-around;
+    flex-wrap:wrap;
+    margin: 50px;
+}
+
+.single-note{
+    width: 20%;
+    background-color: #E6DED3;
+    border-radius: 5px;
+    margin: 10px;
+    padding: 10px;
+}
+
+.note-footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.note-footer > button {
+    color: #E6DED3;
+    background-color: #779593;
+    border: none;
+    cursor: pointer;
+    border-radius: 2px;
+}
