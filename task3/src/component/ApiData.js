@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import axios from "axios";
 
 const ApiData = () => {
   const [phone, setPhone] = useState();
@@ -14,6 +15,11 @@ const ApiData = () => {
         method: "POST",
         body: data,
       });
+
+      // const response = await axios.post(
+      //   "https://chimpu.xyz/api/post.php",
+      //   data
+      // );
 
       const headersText = response.headers.toString();
       console.log(headersText);
