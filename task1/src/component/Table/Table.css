@@ -1,0 +1,18 @@
+.conatiner{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+table{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #FAFAFA;
+}
+
+.input > input{
+    outline: none;
+    border: 0.2px solid lightgray;
+}
