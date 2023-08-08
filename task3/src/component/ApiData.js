@@ -3,29 +3,24 @@ import axios from "axios";
 
 const ApiData = () => {
   const [responseHeaders, setResponseHeaders] = useState({});
-
   const postData = async () => {
     const apiUrl = "https://chimpu.xyz/api/post.php";
-    const requestData = { phonenumber: "8933062308" };
-
+    const requestData = { phonenumber: "89445678" };
     try {
-      // const response = await axios.post(apiUrl, requestData, {
-      //   withCredentials: false,
-      // });
       const response = await axios({
-        method: "post",
         url: apiUrl,
-        withCredentials: false,
-        data: requestData,
+        method: "post",
+        body: JSON.stringify(requestData),
       });
 
-      const headers = response.headers;
-      console.log(headers);
-      setResponseHeaders(headers);
-    } catch (error) {
-      console.error("Error:", error);
+      console.log(response);
+      console.log(response.headers);
+      setResponseHeaders(response.headers);
+    } catch (err) {
+      console.log(err);
     }
   };
+
   return (
     <div>
       <button onClick={postData}>Send Data</button>
